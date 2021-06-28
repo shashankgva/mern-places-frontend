@@ -1,20 +1,20 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense } from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
   Switch,
-} from "react-router-dom";
-import MainNavigation from "./shared/components/Navigation/MainNavigation";
-import { AuthContext } from "./shared/context/auth-context";
-import { useAuth } from "./shared/hooks/auth-hook";
-import LoadingSpinner from "./shared/components/UIElements/LoadingSpinner";
+} from 'react-router-dom';
+import MainNavigation from './shared/components/Navigation/MainNavigation';
+import { AuthContext } from './shared/context/auth-context';
+import { useAuth } from './shared/hooks/auth-hook';
+import LoadingSpinner from './shared/components/UIElements/LoadingSpinner';
 
-const Users = lazy(() => import("./users/pages/Users"));
-const NewPlace = lazy(() => import("./places/pages/NewPlace"));
-const UserPlaces = lazy(() => import("./places/pages/UserPlaces"));
-const UpdatePlace = lazy(() => import("./places/pages/UpdatePlace"));
-const Auth = lazy(() => import("./users/pages/Auth"));
+const Users = lazy(() => import('./users/pages/Users'));
+const NewPlace = lazy(() => import('./places/pages/NewPlace'));
+const UserPlaces = lazy(() => import('./places/pages/UserPlaces'));
+const UpdatePlace = lazy(() => import('./places/pages/UpdatePlace'));
+const Auth = lazy(() => import('./users/pages/Auth'));
 
 function App() {
   const { token, login, logout, userId } = useAuth();
@@ -84,4 +84,5 @@ function App() {
   );
 }
 
+//This is a pull request - develop
 export default App;
